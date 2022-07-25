@@ -67,13 +67,13 @@ func main() {
 	)
 
 	if steamOption == "ALLTIME" {
-		filename = "🎮 Steam playtime leaderboard"
+		filename = "Steam playtime leaderboard"
 		lines, err = box.GetPlayTime(ctx, steamID, multiLined, appIDList...)
 		if err != nil {
 			panic("GetPlayTime err:" + err.Error())
 		}
 	} else if steamOption == "RECENT" {
-		filename = "🎮 Recently played Steam games"
+		filename = "Recently played Steam games"
 		lines, err = box.GetRecentGames(ctx, steamID, multiLined)
 		if err != nil {
 			panic("GetRecentGames err:" + err.Error())
